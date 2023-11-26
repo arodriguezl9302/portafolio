@@ -10,7 +10,7 @@ import {
   HiOutlineX,
   HiUser,
 } from "react-icons/hi";
-import Logo from "../../../public/logo.png";
+import Logo from "../../../public/logoAle3.png";
 import { Slide } from "../../animation/Slide";
 
 export default function MobileMenu() {
@@ -25,16 +25,6 @@ export default function MobileMenu() {
       title: "Projects",
       href: "/projects",
       icon: HiBeaker,
-    },
-    {
-      title: "Blog",
-      href: "/blog",
-      icon: HiBookmarkAlt,
-    },
-    {
-      title: "Photos",
-      href: "/photos",
-      icon: HiCamera,
     },
   ];
 
