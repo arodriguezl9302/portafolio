@@ -19,7 +19,7 @@ const options = {
     "Alejandro is a software developer passionate about creating solutions and contributing to online communities.",
   url: "https://arodriguezl.me",
   ogImage:
-    "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
+    "https://www.arodriguezl.me/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FlogoAle3.f29e1b78.png&w=48&q=75",
 };
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: options.title,
     url: options.url,
-    siteName: "victoreke.com",
+    siteName: "arodriguezl.me",
     locale: "en-US",
     type: "website",
     description: options.description,

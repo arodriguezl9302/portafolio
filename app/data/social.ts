@@ -9,6 +9,8 @@ import {
   BiLogoStackOverflow,
   BiLogoSteam,
   BiLogoTwitter,
+  BiEnvelope,
+  BiLogoWhatsapp,
   BiLogoUnsplash,
   BiLogoYoutube,
 } from "react-icons/bi";
@@ -17,6 +19,20 @@ import { SiCodewars } from "react-icons/si";
 import { FaHashnode, FaHashtag, FaSquareGitlab } from "react-icons/fa6";
 
 export const socialLinks = [
+  {
+    id: 4,
+    name: "Email",
+    url: "mailto:arodriguezl9302@gmail.com",
+    icon: BiEnvelope,
+    status: "social",
+  },
+  {
+    id: 5,
+    name: "WhatsApp",
+    url: "https://wa.me/+5358582352",
+    icon: BiLogoWhatsapp,
+    status: "social",
+  },
   {
     id: 1,
     name: "GitHub",

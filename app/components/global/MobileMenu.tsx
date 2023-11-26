@@ -16,11 +16,11 @@ import { Slide } from "../../animation/Slide";
 export default function MobileMenu() {
   const [navShow, setNavShow] = useState(false);
   const data = [
-    {
-      title: "About",
-      href: "/about",
-      icon: HiUser,
-    },
+    // {
+    //   title: "About",
+    //   href: "/about",
+    //   icon: HiUser,
+    // },
     {
       title: "Projects",
       href: "/projects",

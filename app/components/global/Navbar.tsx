@@ -7,10 +7,10 @@ import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   const data = [
-    {
-      title: "About",
-      href: "/about",
-    },
+    // {
+    //   title: "About",
+    //   href: "/about",
+    // },
     {
       title: "Projects",
       href: "/projects",
@@ -28,25 +28,25 @@ export default function Navbar() {
           <Link href="/">
             <Image src={Logo} width={45} height={45} alt="logo" />
           </Link>
-
-          <nav className="md:block hidden">
-            <ul className="flex items-center gap-x-8">
-              {data.map((link, id) => (
-                <li key={id}>
-                  <Link
-                    href={link.href}
-                    className="font-incognito dark:text-white text-zinc-600 dark:hover:text-primary-color hover:text-zinc-900 duration-300 text-base"
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <div className="flex items-center gap-x-4">
-            <Theme />
-            <MobileMenu />
+          <div className="flex gap-4 items-center">
+            <nav className="md:block hidden">
+              <ul className="flex items-center gap-x-8">
+                {data.map((link, id) => (
+                  <li key={id}>
+                    <Link
+                      href={link.href}
+                      className="font-incognito dark:text-white text-zinc-600 dark:hover:text-primary-color hover:text-zinc-900 duration-300 text-base"
+                    >
+                      {link.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="flex items-center gap-x-4">
+              <Theme />
+              <MobileMenu />
+            </div>
           </div>
         </div>
       </header>

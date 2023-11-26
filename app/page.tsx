@@ -63,18 +63,13 @@ export default async function Home() {
               and contributing to online communities
             </h1>
             <p className="text-base dark:text-zinc-400 text-zinc-600 leading-relaxed">
-              {/* I'm Alejandro, a frontend and backend developer passionate about
-              learning and creating software that is beneficial to other
-              developers and the world in general. */}
-              {/* I am a full-stack developer with experience in designing and
-              developing user-centered web and mobile applications. I am
-              currently working on creating solutions using NodeJs at NexoLife */}
-              I have more than 4 years of experience as part of national and
+              I have more than 6 years of experience as part of national and
               international companies, where I have worked as a Software
-              Developer, both as Web, Mobile, FrontEnd and Backend, using modern
+              Developer, both as Web, Mobile, FrontEnd and Backend
+              {/* , using modern
               technologies such as ReactJs, React Native, Vuejs, Html5, Css3,
               Laravel , NestJs, ExpressJs, InertiaJs, PostgreSQL, Mysql,
-              MongoDB, Docker among many others
+              MongoDB, Docker among many others */}
             </p>
           </Slide>
           <Slide delay={0.1}>
