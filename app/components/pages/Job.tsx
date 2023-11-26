@@ -32,7 +32,10 @@ const Job: React.FC<Props> = ({ works }) => {
         <div className="grid grid-cols-1 gap-x-12 gap-y-10">
           {works &&
             works.map((work) => (
-              <div className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[5rem] before:left-9 before:w-[1px] before:h-[calc(100%-70px)] dark:before:bg-zinc-800 before:bg-zinc-200">
+              <div
+                key={work.link}
+                className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[5rem] before:left-9 before:w-[1px] before:h-[calc(100%-70px)] dark:before:bg-zinc-800 before:bg-zinc-200"
+              >
                 <a
                   href={work.link}
                   rel="noreferrer noopener"
