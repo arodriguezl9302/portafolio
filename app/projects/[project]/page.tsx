@@ -12,7 +12,7 @@ type Props = {
 };
 
 const fallbackImage: string =
-  "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png";
+  "https://avatars.githubusercontent.com/u/24697827?v=4";
 
 // Dynamic metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -24,9 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL(`https://arodriguezl.me/projects/${project?.slug}`),
     description: project?.description,
     openGraph: {
-      // images:
-      //   urlFor(project.coverImage?.image).width(1200).height(630).url() ||
-      //   fallbackImage,
+      images: fallbackImage,
       url: `https://arodriguezl.me/projects/${project?.slug}`,
       title: project?.name,
       description: project?.description,

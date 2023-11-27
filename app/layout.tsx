@@ -18,8 +18,7 @@ const options = {
   description:
     "Alejandro is a software developer passionate about creating solutions and contributing to online communities.",
   url: "https://arodriguezl.me",
-  ogImage:
-    "https://www.arodriguezl.me/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FlogoAle3.f29e1b78.png&w=48&q=75",
+  ogImage: "https://avatars.githubusercontent.com/u/24697827?v=4",
 };
 
 export const metadata: Metadata = {

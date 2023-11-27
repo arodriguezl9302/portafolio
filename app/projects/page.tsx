@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     title: "Projects | Alejandro Rodríguez López",
     url: "https://arodriguezl.me/projects",
     description: "Explore projects built by Alejandro Rodríguez López",
-    // images:
-    //   "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png",
+    images:
+      "https://avatars.githubusercontent.com/u/24697827?v=4",
   },
 };
 
