@@ -116,7 +116,7 @@ export default async function Usage() {
       description: " - JavaScript UI Library",
     },
     {
-      link: "https://vuejs.org/",
+      link: "https://vueframework.com/",
       text: "VueJs",
       description: " - JavaScript UI Library",
     },
