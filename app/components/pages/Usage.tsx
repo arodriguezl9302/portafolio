@@ -66,8 +66,8 @@ export default async function Usage() {
 
   const libraries = [
     {
-      link: "https://www.php.net",
-      text: "PHP",
+      link: "https://lenguajejs.com/",
+      text: "JavaScript",
       description: " - Programing Language",
     },
     {
@@ -76,8 +76,8 @@ export default async function Usage() {
       description: " - Typed Superset of JavaScript Library",
     },
     {
-      link: "https://lenguajejs.com/",
-      text: "JavaScript",
+      link: "https://www.php.net",
+      text: "PHP",
       description: " - Programing Language",
     },
     {
