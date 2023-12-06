@@ -116,6 +116,11 @@ export default async function Usage() {
       description: " - JavaScript UI Library",
     },
     {
+      link: "https://vuejs.org/",
+      text: "VueJs",
+      description: " - JavaScript UI Library",
+    },
+    {
       link: "https://nextjs.org/",
       text: "NextJs",
       description: " - React Framework",
