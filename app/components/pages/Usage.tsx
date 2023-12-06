@@ -76,7 +76,7 @@ export default async function Usage() {
       description: " - Typed Superset of JavaScript Library",
     },
     {
-      link: "https://www.javascript.com/",
+      link: "https://lenguajejs.com/",
       text: "JavaScript",
       description: " - Programing Language",
     },
