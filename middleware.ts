@@ -12,7 +12,7 @@ export default async function middleware(req: any) {
   const hostname = req.headers.get("host");
 
   // Se define una lista de dominios permitidos (incluyendo localhost y el dominio real)
-  const allowedDomains = ["localhost:3000", "menu.test"];
+  const allowedDomains = ["localhost:3000", "menu.test", "arodriguezl.me"];
 
   // Verificamos si el hostname actual está en la lista de dominios permitidos
   const isAllowedDomain = allowedDomains.some((domain) =>
@@ -31,8 +31,6 @@ export default async function middleware(req: any) {
   }
 
   const subdomainData = subdomains.find((d: any) => d.subdomain === subdomain);
-
-  console.log("data: ", subdomainData);
 
   if (subdomainData) {
     // Reescribe la URL a una ruta dinámica basada en el subdominio
