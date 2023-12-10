@@ -1,14 +1,17 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link"
-import { useParams } from "next/navigation"
+import Link from "next/link";
+import { useParams } from "next/navigation";
 
 export default function Component() {
-
   const params = useParams();
+  const searchParams = useSearchParams();
   const tenant = params.subdomain;
-  console.log(tenant)
+  const tenatName = tenant === "create" ? searchParams.get("name") : "";
+
+  console.log(tenant, tenatName);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -30,28 +33,54 @@ export default function Component() {
             <path d="M3 6h18" />
             <path d="M16 10a4 4 0 0 1-8 0" />
           </svg>
-          <span className="sr-only">Welcome to {tenant}</span>
+          <span className="sr-only">
+            {tenant === "create"
+              ? `Creando a ${tenatName}`
+              : `Welcome to ${tenant}`}
+          </span>
         </Link>
         <nav className="flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
             Home
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
             Shop
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
             About
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
             Contact
           </Link>
         </nav>
       </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-900 text-center">
-          <h1 className="text-4xl font-bold mb-4">Welcome to {tenant}</h1>
+          <h1 className="text-4xl font-bold mb-4">
+            {" "}
+            {tenant === "create"
+              ? `Creando a ${tenatName}`
+              : `Welcome to ${tenant}`}
+          </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
             The best place for your online shopping needs.
+            {tenant === "create" ? (
+              <input name="tenant" value={tenatName} />
+            ) : (
+              ""
+            )}
           </p>
           <Link href="#">
             <button>Shop Now</button>
@@ -211,7 +240,9 @@ export default function Component() {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full border-t px-4 md:px-6">
-        <p className="text-xs text-gray-600 dark:text-gray-400">© E-commerce Inc. All rights reserved.</p>
+        <p className="text-xs text-gray-600 dark:text-gray-400">
+          © E-commerce Inc. All rights reserved.
+        </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">
             Terms of Service
@@ -222,6 +253,5 @@ export default function Component() {
         </nav>
       </footer>
     </div>
-  )
+  );
 }
-

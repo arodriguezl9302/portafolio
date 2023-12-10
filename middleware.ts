@@ -15,19 +15,33 @@ export default async function middleware(req: any) {
   const allowedDomains = ["localhost:3000", "menu.test", "arodriguezl.me"];
 
   // Verificamos si el hostname actual está en la lista de dominios permitidos
-  const isAllowedDomain = allowedDomains.some((domain) =>
-    hostname.includes(domain)
-  );
+  const isAllowedDomain = allowedDomains.some((domain) => {
+    // console.log("domain dentro some: ", domain);
+    // console.log("hostanem dentro some: ", hostname);
+    return hostname.includes(domain);
+  });
 
   // Extraemos el posible subdominio de la URL
+  const domain = hostname.split(".")[1] + "." + hostname.split(".")[2];
   const subdomain = hostname.split(".")[0];
+
+  // console.log("dominio: ", domain);
+  // console.log("subdomain: ", subdomain);
+  // console.log("pathname: ", url.pathname);
+  // console.log("req: ", req.url);
+  // console.log("isAllowedDomain: ", isAllowedDomain);
 
   // Si estamos en un dominio permitido y no es un subdominio, permitimos la solicitud
   if (
     isAllowedDomain &&
     !subdomains.some((d: any) => d.subdomain === subdomain)
   ) {
-    return NextResponse.next();
+    if (subdomain != "arodriguezl") {
+      const url = new URL(`http://create.arodriguezl.me/?name=${subdomain}`);
+      return NextResponse.redirect(url);
+    } else {
+      return NextResponse.next();
+    }
   }
 
   const subdomainData = subdomains.find((d: any) => d.subdomain === subdomain);
