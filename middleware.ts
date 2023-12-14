@@ -36,7 +36,7 @@ export default async function middleware(req: any) {
     isAllowedDomain &&
     !subdomains.some((d: any) => d.subdomain === subdomain)
   ) {
-    if (subdomain != "arodriguezl") {
+    if (subdomain != "arodriguezl" || subdomain != "www") {
       const url = new URL(`http://create.arodriguezl.me/?name=${subdomain}`);
       return NextResponse.redirect(url);
     } else {
